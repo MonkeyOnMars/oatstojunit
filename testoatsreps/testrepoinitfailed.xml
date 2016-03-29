@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script duration="124621" iterationNum="0" name="test_1" reportTime="3/23/2016 13:50:07 PM" result="Failed" testDate="3/23/2016 13:48:02 PM" type="basic.step" workspace="Test">
+<i18nProperty duration="Playback Time (sec)" name="Page" recid="Record ID" result="Result" summary="Summary" type="Type"/>
+<Initialize duration="124327" name="Initialize Total (sec)" result="Failed" summary="" type="basic.init">
+  <StepGroup duration="123420" name="Run Child Script: Login" result="Failed" summary="" type="basic.stepGroup">
+    <Step duration="123272" name="Login" result="Passed" summary="" type="basic.script">
+    <Step duration="123321" name="Initialize: Login" result="Passed" summary="" type="basic.stepGroup">
+    <Step duration="0" name="Launch Browser: InternetExplorer 9.11.9600.18124" result="Passed" summary="" type="basic.step"/>
+    <Step duration="2103" name="Close Browser" result="Passed" summary="" type="basic.step"/></Step>
+    <Step duration="39" name="Finish: Login" result="Passed" summary="" type="basic.stepGroup"/></Step>
+  </StepGroup>
+</Initialize>
+<Finish duration="15" name="Finish Total (sec)" result="Passed" summary="" type="basic.finish"/>
+</Script>

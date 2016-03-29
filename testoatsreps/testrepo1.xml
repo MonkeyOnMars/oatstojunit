@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Script duration="124621" iterationNum="0" name="script_name1" reportTime="3/23/2016 13:50:07 PM" result="Failed" testDate="3/23/2016 13:48:02 PM" type="basic.step" workspace="Test">
+<i18nProperty duration="Playback Time (sec)" name="Page" recid="Record ID" result="Result" summary="Summary" type="Type"/>
+
+<Initialize duration="124327" name="Initialize Total (sec)" result="Failed" summary="" type="basic.init">
+  <StepGroup duration="123420" name="Run Child Script: Login" result="Failed" summary="" type="basic.stepGroup">
+          <Step duration="123272" name="Login" result="Passed" summary="" type="basic.script">
+                 <Step duration="123321" name="Initialize: Login" result="Passed" summary="" type="basic.stepGroup">
+                    <Step duration="0" name="Launch Browser: InternetExplorer 9.11.9600.18124" result="Passed" summary="" type="basic.step"/>
+                    <Step duration="2103" name="Close Browser" result="Passed" summary="" type="basic.step"/>
+                 </Step>
+                 <Step duration="39" name="Finish: Login" result="Passed" summary="" type="basic.stepGroup"/>
+          </Step>
+  </StepGroup>
+</Initialize>
+<Run duration="138309" name="Iteration Total (sec)" result="Passed" summary="" type="basic.iteration">
+  <Step duration="0" name="GetNextDatabankRecord: Remittance_prevention" result="Passed" summary="Data Used:[12312312, 1, 2, test, ]" type="basic.resource"/>
+  <Step duration="5473" name="Think: 5,457 (sec)." result="Passed" summary="" type="basic.comment"/>
+ <StepGroup duration="100419" name="Test something" result="Passed" summary="" type="basic.stepGroup">
+            <Step duration="3194" name="SelectMenuItem window(&quot;@name='TEST_WIN'&quot;) Other|Economy events" result="Passed" summary="" type="ft.action" />
+            <Step duration="63174" name="Run Child Script: TEST_SCRIPT1 objects test" result="Passed" summary="" type="basic.stepGroup">
+                <Step duration="63043" name="TEST_SCRIPT1 objects test" result="Passed" summary="" type="basic.script">
+                    <Step duration="27" name="Initialize: TEST_SCRIPT1 objects test" result="Passed" summary="" type="basic.stepGroup" />
+                    <Step duration="63043" name="Run: TEST_SCRIPT1 objects test - Iteration 1" result="Passed" summary="" type="basic.stepGroup" />
+                    <Step duration="27" name="Finish: TEST_SCRIPT1 objects test" result="Passed" summary="" type="basic.stepGroup" />
+                </Step>
+            </Step>
+            <Step duration="574" name="Object Test: OBJECT_TEST_ID" recid="12" result="Passed" summary="" type="ft.test">
+                <Step duration="0" name="Attribute 'text':Expected: '12312312', Actual: '12312312'" result="Passed" summary="Data Used:12312312" type="ft.subtest" />
+                <Step duration="0" name="Attribute 'name':Expected: 'OBJECT_TEST_ID', Actual: 'OBJECT_TEST_ID'" result="Passed" summary="" type="ft.subtest" />
+            </Step>
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000006 - 1234 (TEST1) -       684,50 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 1235678 - 1235 (TEST1) -        10,00 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 1235678 - 1234 (TEST1) -        93,83 |         0,00" type="basic.comment" />
+            <Step duration="1" name="Info" result="Passed" summary="test text: 1235678 - 1401 (TEST2) -       -50,00 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 32132132 - 1223 (TEST2) -       -86,00 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 32132132 - 1323 (TEST3) -        86,00 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000007 - 1234 (TEST1) -        72,95 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000001 - 1234 (TEST1) -        23,79 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000001 - 1110 (TEST3) -      1282,30 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000002 - 1234 (TEST1) -        48,13 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000002 - 1110 (TEST4) -      -300,00 |         0,00" type="basic.comment" />
+            <Step duration="1" name="Info" result="Passed" summary="test text: 00000002 - 1234 (TEST1) -         3,27 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000003 - 1234 (TEST1) -        16,34 |         0,00" type="basic.comment" />
+            <Step duration="1" name="Info" result="Passed" summary="test text: 00000003 - 1223 (TEST1) -        86,00 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000003 - 1442 (TEST1) -       110,00 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000004 - 1234 (TEST1) -        23,16 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000004 - 1110 (TEST3) -      1282,30 |         0,00" type="basic.comment" />
+            <Step duration="0" name="Info" result="Passed" summary="test text: 00000005 - 1110 (TEST4) -      -300,00 |         0,00" type="basic.comment" />
+            <Step duration="669" name="Close window(&quot;@name='TEST_WIN'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="727" name="Close window(&quot;@name='TEST_WIN'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="550" name="Close window(&quot;@name='TEST_WIN'&quot;)" result="Passed" summary="" type="ft.action" />
+        </StepGroup>
+
+        <StepGroup duration="42270" name="Create payment matrix" result="Failed" summary="" type="basic.stepGroup">
+            <Step duration="3042" name="SelectMenuItem window(&quot;@name='TEST_WIN'&quot;) economY|Matrixes" result="Passed" summary="" type="ft.action" />
+            <Step duration="371" name="InvokeSoftKey textField(&quot;@name='TEXT_FIELD_0'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="191" name="SetText textField(&quot;@name='TEXT_FIELD_2'&quot;) 00000006" result="Passed" summary="" type="ft.action" />
+            <Step duration="399" name="InvokeSoftKey textField(&quot;@name='TEXT_FIELD_2'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="198" name="SetText textField(&quot;@name='TEXT_FIELD_3'&quot;) 1" result="Passed" summary="Data Used:1" type="ft.action" />
+            <Step duration="385" name="InvokeSoftKey textField(&quot;@name='TEXT_FIELD_3'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="198" name="SetText textField(&quot;@name='TEXT_FIELD_4'&quot;) 1" result="Passed" summary="Data Used:1" type="ft.action" />
+            <Step duration="406" name="InvokeSoftKey textField(&quot;@name='TEXT_FIELD_4'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="194" name="SetText textField(&quot;@name='TEST_AMOUNT'&quot;) 18410,77" result="Passed" summary="" type="ft.action" />
+            <Step duration="611" name="SetText textField(&quot;@name='TEST_ID'&quot;) 12312312" result="Passed" summary="Data Used:12312312" type="ft.action" />
+            <Step duration="357" name="Store matrix data" result="Passed" summary="" type="basic.stepGroup">
+                <Step duration="0" name="Info" result="Passed" summary="test text: value: 123456" type="basic.comment" />
+            </Step>
+            <Step duration="875" name="InvokeSoftKey textField(&quot;@name='TEST_AMOUNT'&quot;)" result="Passed" summary="" type="ft.action" />
+            <Step duration="34423" name="Booking of payment" result="Failed" summary="" type="basic.stepGroup">
+                <Step duration="3170" name="SelectMenuItem window(&quot;@name='TEST_WIN'&quot;) Cases" result="Passed" summary="" type="ft.action" />
+                <Step duration="30528" name="SetText textField(&quot;@name='TEXT_FIELD_5'&quot;) 12312312" result="Failed" summary="Forms Object Not Found!  XPath: //forms:textField[(@name='TEXT_FIELD_5')], Type: oracle.oats.scripting.modules.formsFT.helper.test.TextField, Cause: No Matches" type="ft.action" />
+                <Step duration="0" name="Reported Failure" result="Failed" summary="Failed: Forms Object Not Found!  XPath: //forms:textField[(@name='TEXT_FIELD_5')], Type: oracle.oats.scripting.modules.formsFT.helper.test.TextField, Cause: No Matches" type="basic.comment" />
+            </Step>
+        </StepGroup>
+</Run>
+
+<Finish duration="15" name="Finish Total (sec)" result="Passed" summary="" type="basic.finish"/>
+</Script>
