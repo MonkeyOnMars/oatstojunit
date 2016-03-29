@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <project name="opensctipTest" default="openScript" basedir=".">
+    <!-- OpenScript command line bat -->
+	<!-- input params --> 
+	
+	<!-- open.script.dir ..\OracleATS\openScript open.script --> 
+	<!-- test path test.path ..\OracleATS\OFT\Test\test_case -->
+	<!-- test test.name test_case.jwg --> 
+	<!-- jenkins build_number build.number test_case.jwg --> 
+	
+    <property name="runScript" location="${open.script.dir}\runScript.bat"/>
+    <!-- Copy OpenScript HTML report for HTML Publisher plugin -->
+    <property name="tmpDir" location=".\results\tmp"/>
+    <!-- Test Script name -->
+    <property name="scriptName1" location="${test.path}\${test.name}"/>
+	
+    <target name="init">
+      <delete dir="${tmpDir}"/>
+      <mkdir dir="${tmpDir}"/>
+
+      <!-- OpenScript HTML result report's DirName is "Session[increment No]". Using build.number  -->
+      <buildnumber/>
+      <!--<property name="resultDir" value=".\results\Session${build.number}"/>-->
+      <property name="resultDir" value = "${test.path}\results\jenyresult${build.number}"/>
+	  <echo message="result dir: ${resultDir}"/>
+    </target>
+
+    <target name="openScript" depends="init">
+      <!-- Run  -->
+      
+	  <property name="script_args" value = "&quot;${scriptName1}&quot; -resultReportFolder &quot;${resultDir}&quot;"/>
+	  <echo message="before running script with args: ${script_args}"/>
+	  
+	  <exec executable="${runScript}">
+        <arg value="${script_args}"/>		
+      </exec>
+		
+      <!-- Overview.properties has result information of test. output this file since ver12.1.0.1.0  -->
+      <property file="${resultDir}\overview.properties"/>
+
+      <!-- for HTML Publisher plugin. run next step in Jenkins  -->
+      <copy todir="${tmpDir}">
+        <fileset dir="${resultDir}"/>
+      </copy>
+
+      <!-- outcome property exist in overview.properties. set result : "Failed" or "Passed"  -->
+      <fail message="Script result :${outcome}">
+        <condition>
+    	  <not>
+            <equals arg1="${outcome}" arg2="Passed"/>
+    	  </not>
+    	</condition>
+      </fail>    
+    </target>
+  </project>
